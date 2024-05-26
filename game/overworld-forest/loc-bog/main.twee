@@ -45,7 +45,7 @@
 	<<elseif $worn.upper.name isnot "naked">>
 		You dust off your hands on your $worn.upper.name.
 	<<else>>
-		당신은 손에서 먼지를 털어낸다.
+		당신의 손에 먼지가 묻어난다.
 	<</if>>
 	<br><br>
 
@@ -92,7 +92,7 @@
 당신은 숲과 황무지 사이의 늪지대에 있다.
 <<if $bogwater gte 1>>
 	<<water>><<set _bogmod to 1.5>>
-	이곳의 물은 입수할 수 있을 정도로 얕다.
+	이곳의 물은 서있을 수 있을 정도로 얕다.
 <<else>>
 	나무 통로가 있어 수렁을 건너지 않아도 된다.
 <</if>>
@@ -100,11 +100,11 @@
 	<<case "clear" "overcast">>
 		<<switch Time.dayState>>
 			<<case "dawn">>
-				낮은 아침 해가 나무 사이로 매혹적인 빛을 비춘다.
+				낮게 깔린 아침 해가 나무 사이로 매혹적인 빛을 비춘다.
 			<<case "day">>
 				The sun's rays fight to pierce the canopy.
 			<<case "dusk">>
-				이상한 모양의 빛이 산책로를 따라 춤을 추고 물에서 반사된다.
+				기이한 모양의 빛이 산책로를 따라 춤을 추고 물에서 반사된다.
 			<<case "night">>
 				<<if isBloodmoon()>>
 					고인 물은 붉은 빛을 다시 캐노피로 반사한다.
