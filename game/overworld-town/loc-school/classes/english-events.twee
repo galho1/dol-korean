@@ -265,11 +265,11 @@
 		"I'll let you off this time," <<he>> says. "But next time be prepared."
 	<<else>>
 		Doren shakes <<his>> head, and passes you <<his>> copy of the book.<br>
-		"Not good enough," <<he>> says. "Next time be better prepared." <<detention 1>><<gdelinquency>>
+		"그닥 충분하진 않군." <<he>> says. "다음 번엔 준비 더 잘 해오길 바란다." <<detention 1>><<gdelinquency>>
 	<</if>>
 <<elseif $phase is 1>> /* Ask friends for help */
 	<<if $kylarenglishstate is "active">> /* Active Kylar will always help */
-		Kylar passes you a copy of the book. "Here you are, my love." <<status -10>><<lcool>>
+		Kylar passes you a copy of the book. "여기 있어, 내 사랑." <<status -10>><<lcool>>
 		<br><br>
 		You read out a passage.
 		<br><br>
