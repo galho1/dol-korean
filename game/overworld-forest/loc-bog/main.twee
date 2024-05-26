@@ -2,15 +2,15 @@
 <<set $location to "bog">><<set $outside to 1>><<effects>>
 <<if !$bogProgress>>
 	<<set $bogProgress to 1>>
-	You follow the brook downstream until you come to the edge of a rocky outcrop. A wall of drenched leaves obscures the horizon ahead.
+	개울을 따라 하류로 내려가다가 바위가 많은 노두의 끝에 다다른다. 담벼락 같은 낙엽이 앞 지평선을 가린다.
 	<br><br>
 
-	You carefully peer over the edge. You see a rickety wooden walkway at the bottom off to the right, worn by the trickle of water from the end of the brook. The water beyond is stagnant, but looks deep enough to jump into.
+	당신은 조심스럽게 그 가장자리를 바라본다. 당신은 오른쪽 아래 바닥에 개울 끝에서 흘러내리는 물에 의해 마모된 구불구불한 나무 통로를 본다. 그 너머의 물은 고인 물이지만 뛰어들 만큼 충분히 깊게 보인다.
 	<br><br>
 
-	<span class="gold">You've discovered the bog.</span>
+	<span class="gold">당신은 수렁을 발견했다.</span>
 <<else>>
-	You follow the brook downstream, to the edge of the bog.
+	개울을 따라 하류로 가면 늪의 가장자리에 도달할 수 있다.
 <</if>>
 <br><br>
 
@@ -26,7 +26,7 @@
 :: Bog Intro Glide
 <<effects>>
 
-You jump, falling several feet before the stagnant air catches your wings. You land hard, but unharmed, on the wooden walkway.
+	고인 공기가 날개를 붙잡기 전에 몇 미터 아래로 뛰어내린다. 단단한 나무로 된 산책로에 다치지 않고 착륙한다.
 <br><br>
 
 <<link [[다음|Bog]]>><<set $bogdepth to 4>><<set $bogwater to 0>><</link>>
@@ -34,10 +34,10 @@ You jump, falling several feet before the stagnant air catches your wings. You l
 
 :: Bog Intro Climb
 <<effects>>
-You clamber over the ledge and find purchase against the rock wall.
+	당신은 절벽을 타고 올라가 암벽에 기대어 물건을 찾는다.
 <<if $athleticsSuccess>>
 	<<unset $athleticsSuccess>>
-	You take your time, slowly working your way down until <span class="green"> your feet touch the wooden walkway.</span>
+	당신이 천천히 시간을 가지고 길을 걸어 내려가면<span class="green"> 당신의 발이 나무 통로에 닿는다.</span>
 	<br><br>
 
 	<<if $worn.lower.name isnot "naked">>
@@ -45,21 +45,21 @@ You clamber over the ledge and find purchase against the rock wall.
 	<<elseif $worn.upper.name isnot "naked">>
 		You dust off your hands on your $worn.upper.name.
 	<<else>>
-		You dust off your hands.
+		당신은 손에서 먼지를 털어낸다.
 	<</if>>
 	<br><br>
 
 	<<link [[다음|Bog]]>><<set $bogdepth to 4>><<set $bogwater to 0>><</link>>
 	<br>
 <<else>>
-	You take your time, slowly working your way down until <span class="red">you slip about half way</span>. You fall, plunging into the mire. <<pain 4>><<stress 12>><<trauma 6>><<gpain>><<gstress>><<gtrauma>>
+	당신이 천천히 시간을 가지고 길을 걸어 내려가면 <span class="red">당신은 약간 미끄러집니다</span>. 당신은 미끄러져 진흙 속으로 빠진다. <<pain 4>><<stress 12>><<trauma 6>><<gpain>><<gstress>><<gtrauma>>
 	<br><br>
 
 	<<water>>
 	<<if $season is "winter">>
-		The frigid water steals the breath from your lungs. You nearly gasp for breath on instinct, but manage to surface before doing so.
+		차가운 물이 폐에서 숨을 앗아간다. 당신은 본능적으로 숨을 헐떡일 뻔했지만 그 전에 가까스로 수면 위로 올라온다.
 	<<else>>
-		The water is murky and unpleasent. You surface, covered in stray plant matter.
+		물이 탁하고 불쾌하다. 당신은 떠다니는 식물들로 뒤덮인 채 수면 위로 떠오른다.
 	<</if>>
 	<br><br>
 
@@ -69,17 +69,17 @@ You clamber over the ledge and find purchase against the rock wall.
 
 :: Bog Intro Jump
 <<effects>>
-You take a deep breath, a step back, and a moment to collect yourself.
+심호흡을 하고 한 발짝 물러서서 잠시 자신을 정리하는 시간을 갖는다.
 <br><br>
 
-With a running start, you leap over the precipice, clearing the walkway and plunging into the murky water.
+달리기 시작하면, 당신은 절벽을 뛰어넘어 통로를 비우고 어두운 물속으로 뛰어든다.
 <br><br>
 
 <<water>>
 <<if $season is "winter">>
-	The frigid mire steals the breath from your lungs. You nearly gasp for breath on instinct, but manage to surface before doing so.
+	차가운 물이 폐에서 숨을 앗아간다. 당신은 본능적으로 숨을 헐떡일 뻔했지만 그 전에 가까스로 수면 위로 올라온다.
 <<else>>
-	You surface, covered in stray plant matter.
+	당신은 떠다니는 식물들로 뒤덮인 채 수면 위로 떠오른다.
 <</if>>
 <br><br>
 
@@ -89,34 +89,34 @@ With a running start, you leap over the precipice, clearing the walkway and plun
 :: Bog
 <<set $location to "bog">><<set $outside to 1>><<effects>>
 
-You're in the bog between the forest and moor.
+당신은 숲과 황무지 사이의 늪지대에 있다.
 <<if $bogwater gte 1>>
 	<<water>><<set _bogmod to 1.5>>
-	The water here is just shallow enough to stand in.
+	이곳의 물은 입수할 수 있을 정도로 얕다.
 <<else>>
-	A wooden pathway spares you from traversing the mire.
+	나무 통로가 있어 수렁을 건너지 않아도 된다.
 <</if>>
 <<switch $weather>>
 	<<case "clear" "overcast">>
 		<<switch Time.dayState>>
 			<<case "dawn">>
-				The low morning sun casts an enchanting light through the trees.
+				낮은 아침 해가 나무 사이로 매혹적인 빛을 비춘다.
 			<<case "day">>
 				The sun's rays fight to pierce the canopy.
 			<<case "dusk">>
-				Strange shapes of light dance against the walkway and reflect from the water.
+				이상한 모양의 빛이 산책로를 따라 춤을 추고 물에서 반사된다.
 			<<case "night">>
 				<<if isBloodmoon()>>
-					The stagnant water reflects red light back into the canopy.
+					고인 물은 붉은 빛을 다시 캐노피로 반사한다.
 				<<else>>
-					The stagnant water reflects just enough moonlight to allow you to see.
+					고인 물은 당신이 볼 수 있을 정도의 달빛을 반사한다.
 				<</if>>
 		<</switch>>
-		A stone tower is visible far in the distance, to the east.
+		저 멀리 동쪽에 돌탑이 보인다.
 	<<case "rain">>
-		Rain drips in patches through the thick canopy, creating a percussive rhythm as it assails the path.
+		빗방울이 두꺼운 캐노피 사이로 떨어지고, 길에 떨어지면서 경쾌한 리듬을 만들어낸다.
 	<<case "snow">>
-		The canopy catches most of the snow, creating a surreal <<if isBloodmoon()>>red<<else>>white<</if>> blanket above.
+		캐노피가 대부분의 눈을 가리면, 그 위로 초현실적인 <<if isBloodmoon()>>붉은<<else>>새하얀</if>> 담요가 만들어진다.
 <</switch>>
 <<if $bogdepth is 4>>
 	A rocky cliff face blocks the way back to the forest. <span class="red">There's no way up.</span>
@@ -323,7 +323,7 @@ path.
 <<rng>>
 <<if $boglost gte 5>>
 	<<pass 1 hour>><<pain 2>>
-	You run. And run. More and more pathways sprout from the one you're on, almost like branches or the prongs of an impossibly large set of antlers.
+	당신은 달리고, 또 달린다. More and more pathways sprout from the one you're on, almost like branches or the prongs of an impossibly large set of antlers.
 	<br><br>
 
 	<<link [[Stay the course (?:??)|Bog Lost Follow]]>><</link>><<willpowerdifficulty 600 1000>>
